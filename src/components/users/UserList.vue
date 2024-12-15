@@ -2,9 +2,15 @@
   <ul class="user-list">
     <li class="user-item" v-for="user in users" :key="user.id">
       <router-link :to="'/user/' + user.id">
-        <img class="user-img" src="../../../public/img/user-image.png" alt="" />
-        <h1>{{ user.name }}</h1>
-        <p>{{ user.email }}</p>
+        <div class="user-box">
+          <img
+            class="user-img"
+            src="../../../public/img/user-image.png"
+            alt="user-image"
+          />
+          <h1>{{ user.name }}</h1>
+          <p>{{ user.email }}</p>
+        </div>
       </router-link>
     </li>
   </ul>
@@ -29,29 +35,29 @@ export default {
   padding: 0;
   margin: 0;
 
+  .user-box {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   .user-item {
     height: 300px;
     list-style: none;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 15px;
-    text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
     &:hover {
       transform: translateY(-5px);
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
 
-    b-link {
-      text-decoration: none;
-      color: inherit;
-    }
     .user-img {
       width: 120px;
       height: 120px;
