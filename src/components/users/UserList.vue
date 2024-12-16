@@ -58,25 +58,34 @@ export default {
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
 
-    .user-img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 10px;
-      border: 2px solid #42b983;
-    }
+    a {
+      text-decoration: none;
+      display: block;
+      height: 100%;
+      cursor: pointer;
 
-    h1 {
-      font-size: 18px;
-      color: #333;
-      margin: 10px 0 5px;
-      font-weight: bold;
-    }
+      .user-box {
+        .user-img {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-bottom: 10px;
+          border: 2px solid #42b983;
+        }
 
-    p {
-      font-size: 14px;
-      color: #666;
+        h1 {
+          font-size: 18px;
+          color: #333;
+          margin: 10px 0 5px;
+          font-weight: bold;
+        }
+
+        p {
+          font-size: 14px;
+          color: #666;
+        }
+      }
     }
   }
 }
