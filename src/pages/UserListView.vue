@@ -1,7 +1,7 @@
 <template>
   <FilterForm @update:modelValue="query = $event" :modelValue="query" />
   <UserList :users="filterUsers" />
-  <p class="text-info" v-if="filterUsers.length === 0">Користувачів не має</p>
+  <p class="text-info" v-if="filterUsers.length === 0">There are no users.</p>
 </template>
 
 <script>

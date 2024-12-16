@@ -1,6 +1,6 @@
 <template>
   <form class="form-query" v-on:submit.prevent>
-    <label class="text" for="query">Пошук користувачів</label>
+    <label class="text" for="query">User search</label>
     <MyInput
       :modelValue="modelValue"
       @update:modelValue="updateQuery"
