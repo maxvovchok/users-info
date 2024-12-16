@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
+
 import { UserListView } from "@/pages/index.js";
 import { UserDetailsView } from "@/pages/index.js";
+import { PageNotFound } from "@/pages/index.js";
 
 const routes = [
   {
@@ -12,6 +14,11 @@ const routes = [
     path: "/user/:id",
     name: "user",
     component: UserDetailsView,
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "NotFound",
+    component: PageNotFound,
   },
 ];
 
