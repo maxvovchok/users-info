@@ -28,5 +28,10 @@ export default {
   &:focus {
     border-color: #007bff;
   }
+
+  @media (max-width: $breakpoint-sm) {
+    height: 30px;
+    width: 250px;
+  }
 }
 </style>

@@ -37,7 +37,16 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              additionalData: `@use "@/styles/_variables.scss" as *;`,
+            },
+          },
+        ],
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
@@ -62,11 +71,5 @@ module.exports = {
       "@": path.resolve(__dirname, "src"),
     },
     extensions: [".js", ".vue", ".json"],
-  },
-  devServer: {
-    static: path.resolve(__dirname, "dist"),
-    port: 8080,
-    hot: true,
-    historyApiFallback: true,
   },
 };

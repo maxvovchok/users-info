@@ -13,7 +13,7 @@ export default {
 
 <style lang="scss">
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: $font-family;
 }
 
 h1,

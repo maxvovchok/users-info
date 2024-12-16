@@ -46,6 +46,6 @@ export default {
 }
 
 .text {
-  font-size: 24px;
+  font-size: $font-size;
 }
 </style>

@@ -50,7 +50,7 @@ export default {
 <style lang="scss">
 .text-info {
   text-align: center;
-  font-size: 24px;
-  margin: 200px;
+  font-size: $font-size;
+  margin-top: 200px;
 }
 </style>
