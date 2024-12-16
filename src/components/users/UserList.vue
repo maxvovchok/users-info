@@ -7,6 +7,7 @@
             class="user-img"
             src="../../../public/img/user-image.png"
             alt="user-image"
+            loading="lazy"
           />
           <h1>{{ user.name }}</h1>
           <p>{{ user.email }}</p>
@@ -18,6 +19,7 @@
 
 <script>
 export default {
+  name: "UserList",
   props: {
     users: {
       type: Array,
@@ -27,7 +29,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .user-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

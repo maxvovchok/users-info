@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  name: "MyButton",
   props: {
     handleClick: {
       type: Function,
@@ -15,7 +16,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .custom-button {
   display: inline-block;
   padding: 10px 20px;

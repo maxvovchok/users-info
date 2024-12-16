@@ -20,6 +20,7 @@ import { getUserDetails } from "@/service/index.js";
 import { MyButton } from "@/UI/index.js";
 
 export default {
+  name: "UserDetailsView",
   components: {
     UserDetails,
     MyButton,

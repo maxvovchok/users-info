@@ -7,6 +7,7 @@
       class="user-image"
       src="../../../public/img/user-image.png"
       alt="user-image"
+      loading="lazy"
     />
     <h1 class="user-name">{{ userDetails.name }}</h1>
     <p class="user-email">📧 Email: {{ userDetails.email }}</p>
@@ -41,6 +42,7 @@
 
 <script>
 export default {
+  name: "UserDetails",
   props: {
     userDetails: {
       type: Object,
@@ -51,7 +53,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .user-details {
   max-width: 600px;
   margin: 20px auto;

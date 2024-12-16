@@ -6,7 +6,6 @@
 
 <script>
 export default {
-  components: {},
   name: "App",
 };
 </script>

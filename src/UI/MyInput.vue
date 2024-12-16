@@ -9,6 +9,7 @@
 
 <script>
 export default {
+  name: "MyInput",
   props: {
     modelValue: String,
   },
@@ -20,7 +21,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .my-input {
   height: 20px;
   width: 200px;
