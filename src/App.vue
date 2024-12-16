@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import "vue-loading-overlay/dist/css/index.css";
+
 export default {
   name: "App",
 };

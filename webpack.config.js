@@ -12,7 +12,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: process.env.NODE_ENV === "production" ? "/users-info/" : "/",
+    publicPath: "/users-info/",
   },
   optimization: {
     minimize: true,
