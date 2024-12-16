@@ -2,16 +2,29 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
 const webpack = require("webpack");
+const TerserPlugin = require("terser-webpack-plugin");
 const dotenv = require("dotenv");
 dotenv.config();
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: "./src/main.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/",
+    publicPath: process.env.NODE_ENV === "production" ? "/users-info/" : "/",
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          compress: {
+            drop_console: true,
+          },
+        },
+      }),
+    ],
   },
   devServer: {
     static: path.resolve(__dirname, "dist"),
@@ -24,6 +37,11 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: "vue-loader",
+        options: {
+          compilerOptions: {
+            whitespace: "condense",
+          },
+        },
       },
       {
         test: /\.m?js$/,
@@ -71,7 +89,7 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      vue$: "vue/dist/vue.esm-bundler.js",
+      vue$: "vue/dist/vue.runtime.esm-bundler.js",
       "@": path.resolve(__dirname, "src"),
     },
     extensions: [".js", ".vue", ".json"],

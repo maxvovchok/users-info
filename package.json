@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://maxvovchok.github.io/users-info",
   "scripts": {
-    "serve": "webpack serve --mode development",
-    "build": "webpack"
+    "serve": "webpack serve --mode production",
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
-  "author": "YOUR_NAME <YOUR_EMAIL>",
+  "author": "Maksym Vovchok <vovchokmaxym2@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -16,14 +18,15 @@
     "babel-loader": "^9.2.1",
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.2.0",
     "html-webpack-plugin": "^5.6.3",
     "sass": "^1.83.0",
     "sass-loader": "^16.0.4",
     "style-loader": "^4.0.0",
     "vue": "^3.5.13",
     "vue-loader": "^17.4.2",
-    "vue-template-compiler": "^2.7.16",
     "webpack": "^5.97.1",
+    "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.2.0"
   },

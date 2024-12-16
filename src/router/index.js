@@ -1,8 +1,6 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 
 import { UserListView } from "@/pages/index.js";
-import { UserDetailsView } from "@/pages/index.js";
-import { PageNotFound } from "@/pages/index.js";
 
 const routes = [
   {
@@ -13,17 +11,17 @@ const routes = [
   {
     path: "/user/:id",
     name: "user",
-    component: UserDetailsView,
+    component: () => import("../pages/UserDetailsView"),
   },
   {
     path: "/:catchAll(.*)",
     name: "NotFound",
-    component: PageNotFound,
+    component: () => import("../pages/PageNotFoundView"),
   },
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(process.env.BASE_URL),
   routes,
 });
 
